@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detect Emotion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+  <h2>Upload a Face Image</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required><br><br>
+    Platform:
+    <select name="platform">
+      <option value="youtube">YouTube</option>
+      <option value="spotify">Spotify</option>
+    </select><br><br>
+    <button type="submit">Analyze Emotion</button>
+  </form>
+
+  <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>

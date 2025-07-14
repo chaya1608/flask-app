@@ -1,0 +1,165 @@
+/* Minimal Neon Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Orbitron', monospace, sans-serif;
+  margin: 0;
+  height: 100vh;               /* Full viewport height */
+  display: flex;
+  justify-content: center;     /* Horizontal center */
+  align-items: center;         /* Vertical center */
+  padding: 0 1rem;             /* Some side padding for small screens */
+  text-align: center;          /* Center text inside */
+  flex-direction: column;      /* Stack children vertically */
+}
+
+
+h1, h2, h3 {
+  color: #7ef9ff; /* Soft neon cyan */
+  text-shadow: 0 0 6px #7ef9ff88;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #ff77ff; /* Soft neon pink */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff99ff;
+  text-shadow: 0 0 6px #ff99ffaa;
+}
+
+form {
+  background: #1f1f1f;
+  border: 1px solid #7ef9ff55;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 450px;
+  box-shadow: 0 0 8px #7ef9ff22;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+select,
+button,
+input[type="file"] {
+  background: transparent;
+  border: 1.5px solid #7ef9ffaa;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Orbitron', monospace, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+select:focus,
+input[type="file"]:focus {
+  border-color: #7ef9ffcc;
+  box-shadow: 0 0 8px #7ef9ff99;
+}
+
+button {
+  background: #7ef9ff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #121212;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #7ef9ffaa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #a6f1ff;
+  box-shadow: 0 0 10px #a6f1ffcc;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+select {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 1rem;
+  color: #b0b0b0;
+}
+
+input[type="file"] {
+  padding: 5px 0;
+}
+
+/* Scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7ef9ff77;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  
+  form {
+    max-width: 100%;
+  }
+}
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Orbitron', monospace, sans-serif;
+  margin: 0;
+  height: 100vh;               /* Full viewport height */
+  display: flex;
+  justify-content: center;     /* Horizontal center */
+  align-items: center;         /* Vertical center */
+  padding: 0 1rem;             /* Some side padding for small screens */
+  text-align: center;          /* Center text inside */
+  flex-direction: column;      /* Stack children vertically */
+}
+/* Hide the links in the wishlist */
+ul li a {
+  display: none; /* Completely hide the link */
+}
+
+ul li em {
+  color: #ff77ff; /* Optional: Add a subtle neon color to indicate no link */
+  font-style: normal;
+}
+/* Hide the entire Saved Wishlist section */
+h3, ul {
+  display: none;
+}

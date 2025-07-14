@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+  <h2>Your Mood-Based Wishlist</h2>
+  <form method="post">
+    Emotion:
+    <select name="emotion">
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="angry">Angry</option>
+      <option value="neutral">Neutral</option>
+      <option value="surprise">Surprise</option>
+      <option value="fear">Fear</option>
+      <option value="disgust">Disgust</option>
+      <option value="calm">Calm</option>
+    </select><br><br>
+    Platform:
+    <select name="platform">
+      <option value="youtube">YouTube</option>
+      <option value="spotify">Spotify</option>
+    </select><br><br>
+    Link: <input type="url" name="link" required><br><br>
+    <button type="submit">Add to Wishlist</button>
+  </form>
+
+  <h3>Saved Wishlist:</h3>
+  <ul>
+    {% for emotion, platforms in wishlist.items() %}
+      <li><strong>{{ emotion }}</strong>
+        <ul>
+          {% for platform, link in platforms.items() %}
+            <li>{{ platform }}: <a href="{{ link }}" target="_blank">{{ link }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p><a href="/detect">Go to Emotion Detector</a></p>
+  <p><a href="/change-password">Change Password</a></p>
+  <p><a href="/history">View History</a></p>
+  <p><a href="/logout">Logout</a></p>
+</body>
+</html>
